@@ -1,4 +1,4 @@
-package elements;
+package com.dezlearn.elements;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

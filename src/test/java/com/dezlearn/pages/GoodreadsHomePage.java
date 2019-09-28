@@ -1,10 +1,9 @@
-package pages;
+package com.dezlearn.pages;
 
 import org.openqa.selenium.WebDriver;
 
+import com.dezlearn.elements.GoodreadsHomeElements;
 import com.dezlearn.step_defs.AbstractBase;
-
-import elements.GoodreadsHomeElements;
 
 public class GoodreadsHomePage {
 	
