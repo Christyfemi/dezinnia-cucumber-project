@@ -16,18 +16,6 @@ public class GoodreadsHomePage {
 		this.driver = base.getDriver();
 		homeElements = new GoodreadsHomeElements(this.driver);
 	}
-
-	public void navigateToPage(String url) {
-		driver.get(url);
-	}
-	
-	public String getCurrentPageUrl() {
-		return driver.getCurrentUrl();
-	}
-	
-	public String getCurrentPageTitle() {
-		return driver.getTitle();
-	}
 	
 	public boolean isRememberMeCheckboxSelected() {
 		return homeElements.rememberMeChk.isSelected();

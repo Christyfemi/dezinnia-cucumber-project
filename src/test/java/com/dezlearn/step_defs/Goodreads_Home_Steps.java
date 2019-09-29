@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import com.dezlearn.pages.Common;
 import com.dezlearn.pages.GoodreadsHomePage;
 
 import cucumber.api.java.After;
@@ -21,14 +22,16 @@ public class Goodreads_Home_Steps {
 
 	boolean isRememberMeSelected = false;
 	GoodreadsHomePage goodreadsHomePage;
+	Common page;
 	
-	public Goodreads_Home_Steps(GoodreadsHomePage goodreadsHomePage) {
+	public Goodreads_Home_Steps(GoodreadsHomePage goodreadsHomePage, Common page) {
 		this.goodreadsHomePage = goodreadsHomePage;
+		this.page = page;
 	}
 	
 	@Given("I am on Goodreads home page")
 	public void i_am_on_Goodreads_home_page() {
-		goodreadsHomePage.navigateToPage("https://www.goodreads.com");
+		page.navigateToPage("https://www.goodreads.com");
 	}
 
 	@When("I check the status of Remember Me checkbox")
@@ -60,7 +63,7 @@ public class Goodreads_Home_Steps {
 		} else if (string.equalsIgnoreCase("Music")) {
 			expected = "https://www.goodreads.com/genres/music";
 		}
-		String actual = goodreadsHomePage.getCurrentPageUrl();
+		String actual = page.getCurrentPageUrl();
 		if (!expected.equals(actual)) {
 			fail("Website does not navigate to arts page.");
 		}
@@ -117,7 +120,7 @@ public class Goodreads_Home_Steps {
 
 	@Then("I verify that website navigates to {string}")
 	public void i_verify_that_website_navigates_to(String string) {
-		String actualUrl = goodreadsHomePage.getCurrentPageUrl();
+		String actualUrl = page.getCurrentPageUrl();
 		if (!actualUrl.equalsIgnoreCase(string)) {
 			fail("Page does not navigate to expected url: " + actualUrl);
 		}
@@ -125,7 +128,7 @@ public class Goodreads_Home_Steps {
 
 	@Then("I verify that new page title is {string}")
 	public void i_verify_that_new_page_title_is(String string) {
-		String actualTitle = goodreadsHomePage.getCurrentPageTitle();
+		String actualTitle = page.getCurrentPageTitle();
 		if (!actualTitle.equalsIgnoreCase(string)) {
 			fail("Page does not have expected title: " + actualTitle);
 		}
