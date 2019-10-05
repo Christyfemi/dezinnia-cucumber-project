@@ -13,7 +13,7 @@ public class AbstractBase {
 	
 	@Before
 	public void setUp() {
-		System.setProperty("webdriver.gecko.driver", "/Users/mayurdeshmukh/Documents/Drivers/geckodriver");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers/geckodriver");
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		System.out.println("Global Before Hook Executed");
