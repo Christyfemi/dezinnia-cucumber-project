@@ -133,4 +133,9 @@ public class Goodreads_Home_Steps {
 			fail("Page does not have expected title: " + actualTitle);
 		}
 	}
+	
+	@Given("I do this")
+	public void i_do_this() {
+	    System.out.println("I do this.");
+	}
 }

@@ -1,5 +1,8 @@
 Feature: Goodreads Home Page Scenarios
 
+ 	Background: Test Background
+ 	Given I do this
+ 	
  	@P0 @P1 @T1 @SP
   Scenario: Validate Remember Me Checkbox
     Given I am on Goodreads home page
