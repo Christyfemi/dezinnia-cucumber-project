@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 		glue= {"com.dezlearn.step_defs"},
 		plugin= {"pretty","html:Reports1"},
 		monochrome= true,
-		dryRun= false,
+		dryRun= true,
 		strict = false,
 		tags = {"@P3"}
 		//name = {"Arts"}
