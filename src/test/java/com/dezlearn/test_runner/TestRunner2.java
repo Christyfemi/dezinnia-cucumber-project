@@ -12,7 +12,8 @@ import cucumber.api.junit.Cucumber;
 		monochrome= true,
 		dryRun= true,
 		strict = false,
-		tags = {"@P3"}
+		//tags = {"@P3"}
+		tags = {"@P11"}
 		//name = {"Arts"}
 		)
 

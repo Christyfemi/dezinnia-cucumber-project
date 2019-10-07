@@ -3,6 +3,7 @@ package com.dezlearn.step_defs;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import cucumber.api.java.After;
@@ -15,6 +16,7 @@ public class AbstractBase {
 	public void setUp() {
 		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers/geckodriver");
 		driver = new FirefoxDriver();
+
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		System.out.println("Global Before Hook Executed");
 	}
